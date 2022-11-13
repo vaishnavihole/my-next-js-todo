@@ -20,6 +20,14 @@ export default function Home() {
     setTask("")
   }
 
+  async function deleteTask(taskNumber){
+    const response = await axios.delete('/api/task', {
+      taskNumber: taskNumber
+    })
+    setTasks(response.data.data)
+    setTask("")
+  }
+
   useEffect(() => {
     getTasks();
   }, [])
@@ -33,7 +41,7 @@ export default function Home() {
         {
           tasks.map((task, index) => (
             <div key={index} className={styles.taskCard}>
-              <h3 className={styles.taskHeading}>{task} <span className={styles.deleteButton}>X</span></h3>
+              <h3 className={styles.taskHeading}>{task} <span className={styles.deleteButton} onClick={()=>{deleteTask(index)}}>X</span></h3>
             </div>
           ))
         }

@@ -17,6 +17,15 @@ export default function handler(req, res){
       message: 'Task added successfully'
     })
   }
+  else if(method === 'DELETE'){
+    const {taskNumber} = req.body;
+    tasks.splice(taskNumber, 1);
+    res.json({
+      status: true,
+      data: tasks,
+      message: 'Task deleted successfully'
+    })
+  }
   else{
     res.json({
       status: false,
