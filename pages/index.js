@@ -26,16 +26,21 @@ export default function Home() {
 
   return (
    <div className={styles.container}>
-      {
-        tasks.map((task, index) => (
-          <div key={index}>
-            <h3>{task}</h3>
-          </div>
-        ))
-      }
-      <div>
-        <input type="text" value={task} onChange={(e)=>{setTask(e.target.value)}}/>
-        <button type="button" onClick={addTask}>Add</button>
+
+      <h1 className={styles.heading}>My ToDo App</h1>
+
+      <div className={styles.taskContainer}>
+        {
+          tasks.map((task, index) => (
+            <div key={index} className={styles.taskCard}>
+              <h3 className={styles.taskHeading}>{task}</h3>
+            </div>
+          ))
+        }
+      </div>
+      <div className={styles.addContainer}>
+        <input type="text" placeholder='Enter Task' className={styles.taskInput} value={task} onChange={(e)=>{setTask(e.target.value)}}/>
+        <button type="button" className={styles.buttonAdd} onClick={addTask}>Add Task</button>
       </div>
     </div>
   )

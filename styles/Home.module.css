@@ -1,0 +1,47 @@
+.heading{
+  color: white;
+  text-align: center;
+}
+
+.taskContainer{
+  max-width: 500px;
+  margin: auto;
+  height: 350px;
+  background-color: #ffbf80;
+  overflow-y: scroll;
+}
+
+.taskCard{
+  background-color: white;
+  color: black;
+  margin: 10px;
+}
+
+.taskHeading{
+  margin: 5px;
+  padding: 5px;
+}
+
+.addContainer{
+  max-width: 500px;
+  margin: auto;
+}
+
+.taskInput{
+  background-color: white;
+  width: 350px;
+  margin: 5px;
+  font-size: 20px;
+  color: black;
+}
+
+.buttonAdd{
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 18px;
+  cursor: pointer;
+}
