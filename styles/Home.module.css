@@ -20,6 +20,13 @@
 .taskHeading{
   margin: 5px;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteButton{
+  color: red;
+  cursor: pointer;
 }
 
 .addContainer{

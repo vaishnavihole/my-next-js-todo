@@ -33,7 +33,7 @@ export default function Home() {
         {
           tasks.map((task, index) => (
             <div key={index} className={styles.taskCard}>
-              <h3 className={styles.taskHeading}>{task}</h3>
+              <h3 className={styles.taskHeading}>{task} <span className={styles.deleteButton}>X</span></h3>
             </div>
           ))
         }
